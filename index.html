@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101522">
+  <title>Arcade — Mini Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Arcade home" data-home>
+        <span class="brand-mark">✦</span><span>arcade<span class="brand-dot">.</span></span>
+      </a>
+      <div class="topbar-right">
+        <span class="status-dot"></span><span class="status-text">ALL SYSTEMS READY</span>
+        <button class="icon-button" id="sound-toggle" title="Toggle sound" aria-label="Toggle sound">♫</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home-view">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE MINI GAME COLLECTION</div>
+        <h1>A little break.<br><span>A lot of fun.</span></h1>
+        <p class="hero-copy">Six classics. One place. Pick a game and beat your personal best.</p>
+        <div class="hero-meta"><span>↳ 06 GAMES</span><span>•</span><span>FREE TO PLAY</span><span>•</span><span>NO ACCOUNT NEEDED</span></div>
+        <div class="section-heading"><div><span class="eyebrow">CHOOSE YOUR GAME</span><h2>The arcade</h2></div><span class="game-count">01 — 06</span></div>
+        <div class="game-grid">
+          <button class="game-card snake-card" data-game="snake">
+            <span class="card-number">01 / CLASSIC</span><span class="game-art snake-art"><i></i><i></i><i></i><i></i><b></b></span>
+            <span class="card-bottom"><span><strong>Snake</strong><small>Eat. Grow. Don't crash.</small></span><span class="play-arrow">↗</span></span>
+          </button>
+          <button class="game-card mines-card" data-game="mines">
+            <span class="card-number">02 / LOGIC</span><span class="game-art mine-art"><i>1</i><i>2</i><i>✳</i><i>1</i><i>3</i><i>2</i><i>1</i><i>✳</i><i>1</i></span>
+            <span class="card-bottom"><span><strong>Minesweeper</strong><small>Clear the field. Avoid mines.</small></span><span class="play-arrow">↗</span></span>
+          </button>
+          <button class="game-card two-card" data-game="2048">
+            <span class="card-number">03 / PUZZLE</span><span class="game-art tiles-art"><i>2</i><i>4</i><i>8</i><i>16</i></span>
+            <span class="card-bottom"><span><strong>2048</strong><small>Merge tiles. Reach 2048.</small></span><span class="play-arrow">↗</span></span>
+          </button>
+          <button class="game-card tetris-card" data-game="tetris">
+            <span class="card-number">04 / ARCADE</span><span class="game-art tetris-art"><i></i><i></i><i></i><i></i><b></b><b></b><b></b></span>
+            <span class="card-bottom"><span><strong>Tetris</strong><small>Stack smart. Clear lines.</small></span><span class="play-arrow">↗</span></span>
+          </button>
+          <button class="game-card reaction-card" data-game="reaction">
+            <span class="card-number">05 / REFLEX</span><span class="game-art reaction-art"><span>⚡</span><i></i></span>
+            <span class="card-bottom"><span><strong>Reaction test</strong><small>How fast are your reflexes?</small></span><span class="play-arrow">↗</span></span>
+          </button>
+          <button class="game-card memory-card" data-game="memory">
+            <span class="card-number">06 / MEMORY</span><span class="game-art memory-art"><i>?</i><i>✦</i><i>?</i><i>◈</i><i>?</i><i>✦</i></span>
+            <span class="card-bottom"><span><strong>Memory</strong><small>Find all matching pairs.</small></span><span class="play-arrow">↗</span></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="game-view hidden" id="game-view">
+        <button class="back-button" id="back-home">← ALL GAMES</button>
+        <div class="game-header"><div><span class="eyebrow" id="game-category">ARCADE GAME</span><h2 id="game-title">Snake</h2><p id="game-description"></p></div><div class="score-panel"><span>BEST SCORE</span><strong id="best-score">0</strong></div></div>
+        <div class="game-layout">
+          <div class="game-stage" id="game-stage"></div>
+          <aside class="game-sidebar">
+            <div class="side-block"><span class="side-label">HOW TO PLAY</span><p id="game-instructions"></p></div>
+            <div class="side-block"><span class="side-label">YOUR SCORE</span><strong class="live-score" id="live-score">0</strong></div>
+            <div class="side-block"><span class="side-label">CONTROLS</span><div id="game-controls" class="control-list"></div></div>
+            <button class="primary-button" id="restart-game">↻ RESTART GAME</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer><span>ARCADE<span class="brand-dot">.</span></span><span>MADE FOR THE JOY OF PLAYING</span><span>v1.0.0</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
